@@ -20,10 +20,9 @@ phases:
     commands:
         - echo Build started
         - ng build --prod
-  post_build:
-   commands:
-     - aws cloudfront create-invalidation --distribution-id ${DISTRIBUTION_ID} --paths "/*"
-
+  # post_build:
+  #  commands:
+  #    - aws cloudfront create-invalidation --distribution-id ${DISTRIBUTION_ID} --paths "/*"
 artifacts:
     files:
         - '**/*'
