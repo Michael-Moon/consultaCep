@@ -17,9 +17,9 @@ phases:
     commands:
         - echo Build started
         - ng build --prod
-  post_build:
+  post_build:s
    commands:
-     - aws cloudfront create-invalidation --distribution-id <EG9BMBS9X49LE> --paths '/*
+    - aws cloudfront create-invalidation --distribution-id EG9BMBS9X49LE --paths "/*"
 artifacts:
     files:
         - '**/*'
