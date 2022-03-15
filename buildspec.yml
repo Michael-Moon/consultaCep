@@ -4,7 +4,7 @@ env:
     variables:
         CACHE_CONTROL: "86400"
         S3_BUCKET: "{{s3_bucket_url}}"
-        BUILD_FOLDER: "dist"
+        BUILD_FOLDER: "dist/consulta-cep"
 phases:
   install:
     runtime-versions:
@@ -20,5 +20,5 @@ phases:
 artifacts:
     files:
         - '**/*'
-    base-directory: 'dist*'
+    base-directory: 'dist/consulta-cep*'
     discard-paths: no
