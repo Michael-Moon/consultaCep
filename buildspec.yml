@@ -17,10 +17,8 @@ phases:
     commands:
         - echo Build started
         - ng build --prod
-  post_build:
-         commands:
-         - echo "Invalidating CloudFront cache with Distribution ID:" EG9BMBS9X49LE
-         - aws cloudfront create-invalidation --distribution-id EG9BMBS9X49LE --paths /index.html /
+        - echo "Invalidating CloudFront cache with Distribution ID:" "EG9BMBS9X49LE"
+         - aws cloudfront create-invalidation --distribution-id "EG9BMBS9X49LE" --paths '/*'
 artifacts:
     files:
         - '**/*'
