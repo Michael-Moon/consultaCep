@@ -9,7 +9,7 @@ import { HttpClient } from '@angular/common/http';
   providedIn: 'root'
 })
 export class Service {
-
+  baseUrl: string =  "/api"
   constructor(
     private http: HttpClient
   ) { }
@@ -21,6 +21,6 @@ export class Service {
   }
   getA(){
 
-    return this.http.get<any>( environment.nest +'/users',{});
+    return this.http.get<any>( this.baseUrl+'/users',{});
   }
 }

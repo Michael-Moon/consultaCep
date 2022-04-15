@@ -1,0 +1,11 @@
+{
+  "/api/*": {
+      "target": "http://nestjs-env.eba-ihs23xmt.us-east-1.elasticbeanstalk.com",
+      "secure": false,
+      "changeOrigin": true,
+      "logLevel": "debug",
+      "pathRewrite": {
+          "^/api": "http://nestjs-env.eba-ihs23xmt.us-east-1.elasticbeanstalk.com"
+      }
+  }
+}
