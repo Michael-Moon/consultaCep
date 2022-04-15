@@ -32,4 +32,8 @@ export class AppComponent  {
   json(obj: any){
     return JSON.stringify(obj)
   }
+
+  async g(){
+   await  this.service.getA().subscribe( resp=> console.log(resp))
+  }
 }

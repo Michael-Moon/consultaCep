@@ -4,7 +4,8 @@
 
 export const environment = {
   production: false,
-  ViaCep:" https://viacep.com.br/ws/"
+  ViaCep:" https://viacep.com.br/ws/",
+  nest:"http://nestjs-env.eba-ihs23xmt.us-east-1.elasticbeanstalk.com"
 
 };
 

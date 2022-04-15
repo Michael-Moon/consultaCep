@@ -19,4 +19,8 @@ export class Service {
 
     return this.http.get<any>( environment.ViaCep + cep.cep +'/json/');
   }
+  getA(){
+
+    return this.http.get<any>( environment.nest +'/users',{});
+  }
 }
