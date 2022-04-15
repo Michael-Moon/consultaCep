@@ -6,7 +6,7 @@ export const environment = {
   production: false,
   ViaCep:" https://viacep.com.br/ws/",
   nest:"http://nestjs-env.eba-ihs23xmt.us-east-1.elasticbeanstalk.com",
-  serverUrl: 'http://167.71.249.87:3000'
+  serverUrl: 'http://nestjs-env.eba-ihs23xmt.us-east-1.elasticbeanstalk.com'
 
 };
 
