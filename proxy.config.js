@@ -12,7 +12,7 @@ const proxy = [
     pathRewrite: { '^/api': '' },
     secure: false,
     changeOrigin: true,
-    target: 'http://nestjs-env.eba-ihs23xmt.us-east-1.elasticbeanstalk.com'
+    target: 'http://167.71.249.87:3000'
   }
 ];
 
