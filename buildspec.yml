@@ -5,9 +5,6 @@ env:
         CACHE_CONTROL: "86400"
         S3_BUCKET: "{{s3_bucket_url}}"
         BUILD_FOLDER: "dist/consulta-cep"
-        BUCKET_NAME: "mydotateste"
-        DISTRIBUTION_ID: "EG9BMBS9X49LE"
-
 phases:
   install:
     runtime-versions:
@@ -15,14 +12,10 @@ phases:
     commands:
         - echo Installing source NPM dependencies...
         - npm install
-        - npm install -g @angular/cli
   build:
     commands:
         - echo Build started
         - ng build --prod
-  post_build:
-   commands:
-     - aws cloudfront create-invalidation --distribution-id ${DISTRIBUTION_ID} --paths "/*"
 artifacts:
     files:
         - '**/*'
