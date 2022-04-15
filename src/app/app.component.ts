@@ -33,7 +33,7 @@ export class AppComponent  {
     return JSON.stringify(obj)
   }
 
-  async getA(){
-   await  this.service.getA().subscribe( resp=> console.log(resp))
+   getA(){
+     this.service.getA().subscribe( resp=> console.log(resp.json()) )
   }
 }
