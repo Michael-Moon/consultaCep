@@ -21,6 +21,7 @@ export class Service {
   }
   getA(){
 
-    return this.http.get<any>( this.baseUrl+'/users',{});
+    return this.http.get<any>( environment.serverUrl +'/users',{});
   }
+
 }

@@ -34,6 +34,6 @@ export class AppComponent  {
   }
 
    getA(){
-     this.service.getA().subscribe( resp=> console.log(resp.json()) )
+     this.service.getA().subscribe( resp=> console.log(resp) )
   }
 }
