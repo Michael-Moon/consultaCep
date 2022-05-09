@@ -7,7 +7,7 @@ import { Component, OnInit } from '@angular/core';
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.scss']
 })
-export class AppComponent  {
+export class AppComponent implements OnInit  {
   title = 'consultaCep';
   sellersPermitString: any;
 
@@ -22,6 +22,9 @@ export class AppComponent  {
     this.formCep = this.formbuilder.group({
       cep: ['']
     })
+  }
+  ngOnInit(): void {
+    this.loadImage();
   }
 
 
@@ -68,6 +71,11 @@ export class AppComponent  {
       await this.service.getImage().subscribe( (response)=> {
         this.sellersPermitString = response.img;
       })
+    })
+  }
+  async loadImage(){
+    await this.service.getImage().subscribe( (response)=> {
+      this.sellersPermitString = response.img;
     })
   }
 }
