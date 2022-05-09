@@ -24,4 +24,12 @@ export class Service {
     return this.http.get<any>( environment.serverUrl +'/users',{});
   }
 
+  sendImage(image){
+
+    return this.http.post<any>( environment.API + '/changeImg', image);
+  }
+
+  getImage(){
+    return this.http.get<any>( environment.API + '/changeImg');
+  }
 }
